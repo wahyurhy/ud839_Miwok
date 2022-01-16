@@ -12,12 +12,12 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class WordAdapter extends ArrayAdapter<Word> {
+public class FamilyAdapter extends ArrayAdapter<Family> {
 
-    private static final String LOG_TAG = WordAdapter.class.getSimpleName();
+    private static final String LOG_TAG = FamilyAdapter.class.getSimpleName();
 
-    public WordAdapter(Activity context, ArrayList<Word> words) {
-        super(context, 0, words);
+    public FamilyAdapter(Activity context, ArrayList<Family> families) {
+        super(context, 0, families);
     }
 
     @NonNull
@@ -29,16 +29,16 @@ public class WordAdapter extends ArrayAdapter<Word> {
                     R.layout.list_item, parent, false);
         }
 
-        Word currentWord = getItem(position);
+        Family currentFamily = getItem(position);
 
         TextView miwokWord = (TextView) listItemView.findViewById(R.id.miwok_word);
-        miwokWord.setText(currentWord.getmMiwokTranslation());
+        miwokWord.setText(currentFamily.getmMiwokTranslation());
 
         TextView defaultTranslation = (TextView) listItemView.findViewById(R.id.default_translation);
-        defaultTranslation.setText(currentWord.getmDefaultTranslation());
+        defaultTranslation.setText(currentFamily.getmDefaultTranslation());
 
         ImageView iconView = (ImageView) listItemView.findViewById(R.id.list_item_icon);
-        iconView.setImageResource(currentWord.getmImageResourceId());
+        iconView.setImageResource(currentFamily.getmImageResourceId());
 
         return listItemView;
     }
