@@ -49,7 +49,6 @@ public class PhrasesActivity extends AppCompatActivity {
         @Override
         public void onCompletion(MediaPlayer mediaPlayer) {
             releaseMediaPlayer();
-            Toast.makeText(PhrasesActivity.this, "Done!", Toast.LENGTH_SHORT).show();
         }
     };
 

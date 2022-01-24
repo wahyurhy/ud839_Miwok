@@ -49,7 +49,6 @@ public class FamilyActivity extends AppCompatActivity {
         @Override
         public void onCompletion(MediaPlayer mediaPlayer) {
             releaseMediaPlayer();
-            Toast.makeText(FamilyActivity.this, "Done!", Toast.LENGTH_SHORT).show();
         }
     };
 

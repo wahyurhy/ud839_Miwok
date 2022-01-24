@@ -49,7 +49,6 @@ public class NumbersActivity extends AppCompatActivity {
         @Override
         public void onCompletion(MediaPlayer mediaPlayer) {
             releaseMediaPlayer();
-            Toast.makeText(NumbersActivity.this, "Done!", Toast.LENGTH_SHORT).show();
         }
     };
 
